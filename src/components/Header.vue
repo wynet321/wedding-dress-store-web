@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>
       <a href="www.baidu.com">
-        <img src="logo.gif" alt="${{}}">
+        <img src="logo.gif" alt="{{ this.$i18nText.logo_alt}}">
       </a>
     </h1>
     <el-input v-model="id"/>
