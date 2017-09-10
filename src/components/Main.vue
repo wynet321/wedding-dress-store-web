@@ -1,12 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <el-input v-model="id"/>
-    <br>
-    <el-button v-on:click="okClick" type="primary">OK</el-button>
-    <el-button v-on:click="changeLocale()" type="primary">Change</el-button>
-    <br>{{ message }}
-    <br> {{ this.$locale }}
+
   </div>
 </template>
 
@@ -22,9 +16,6 @@
         this.$http.get('http://localhost:8080/store/api/' + this.id).then((response) => {
           this.message = response.data
         })
-      },
-      changeLocale () {
-        this.$locale = 'zh_CN'
       }
     }
   }

@@ -17,9 +17,11 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App },
+  components: {App},
   render: h => h(App)
 })
+
+Vue.prototype.$locale = 'en_US'
 
 // new Vue({
 //   el: '#app1',
