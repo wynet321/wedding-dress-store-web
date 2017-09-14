@@ -2,22 +2,20 @@
   <div class="hello">
     <h1>
       <a href="http://www.baidu.com">
-        <img src="assert/logo.gif" :alt="this.$i18nText.logo_alt" :title="this.$i18nText.logo_alt">
+        <img src="assert/logo.gif" :alt="this.$i18n.i18nText.logo_alt" :title="this.$i18n.i18nText.logo_alt">
       </a>
     </h1>
     <el-input v-model="id"/>
     <br>
     <el-button v-on:click="okClick" type="primary">OK</el-button>
-    <el-button v-on:click="changeLocale()" type="primary">Change</el-button>
+    <el-button v-on:click="changeLocale" type="primary">Change</el-button>
     <br>{{ message }}
-    <br>{{ text.logo_alt }}
   </div>
 </template>
 
 <script>
-  import Vue from 'vue'
   export default {
-    data () {
+    data: function () {
       return {
         message: 'aaa',
         id: '',
@@ -31,17 +29,13 @@
         })
       },
       changeLocale () {
-        this.$locale = 'zh_CN'
-        this.fetchI18nText()
-        alert(this.$i18nText.logo_alt)
-        this.text = this.$i18nText
+        if (this.id === '1') {
+          this.$i18n.fetchI18nText('en_US')
+        } else {
+          this.$i18n.fetchI18nText('zh_CN')
+        }
+        this.text = this.$i18n.i18nText
       }
-    },
-    beforeCreate: function () {
-      if (this.$locale === undefined) {
-        Vue.prototype.$locale = 'en_US'
-      }
-      this.fetchI18nText()
     }
   }
 
