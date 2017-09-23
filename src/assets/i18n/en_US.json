@@ -1,3 +1,16 @@
 {
-  "logo_alt" : "aimu"
+  "Main":{
+    "linkLogout": "Logout",
+    "menuProductManager": "Product Management",
+    "menuOrder": "Order Management",
+    "menuAdmin": "System Settings"
+  },
+  "Login":{
+    "titleLogin": "Wedding Dress Management",
+    "buttonLogin": "Login",
+    "checkBoxRemember": "Remember user name",
+    "placeHolderUserName": "Mobile number or email",
+    "placeHolderPassword": "Password",
+    "linkForgetPassword": "Forget password?"
+  }
 }

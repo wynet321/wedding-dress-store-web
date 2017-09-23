@@ -1,9 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="header">
     <h1>
-      <a href="www.baidu.com">
-        <img src="logo.gif" alt="{{ this.$i18nText.logo_alt}}">
-      </a>
+
     </h1>
     <el-input v-model="id"/>
     <br>
@@ -14,7 +12,7 @@
 
 <script>
   export default {
-    name: 'hello',
+    name: 'compHeader',
     props: {
       message: 'aaa',
       id: ''
@@ -50,7 +48,4 @@
     color: #42b983;
   }
 
-  el-input {
-    maxlength: 10;
-  }
 </style>

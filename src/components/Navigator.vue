@@ -1,52 +1,39 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <el-input v-model="id"/>
-    <br>
-    <el-button v-on:click="okClick" type="primary">OK</el-button>
-    <br> {{ message }}
+  <div class="navigator">
+    <el-menu theme="light" class="menu" mode="horizontal">
+      <el-submenu index="1">
+        <template slot="title">{{ $commonText.Main.menuProduct}}</template>
+        <el-menu-item-group title="分组一">
+          <el-menu-item index="1-1">选项1</el-menu-item>
+          <el-menu-item index="1-2">选项2</el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group title="分组2">
+          <el-menu-item index="1-3">选项3</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-menu-item index="2">{{ $commonText.Main.menuOrder}}</el-menu-item>
+      <el-menu-item index="3">{{ $commonText.Main.menuAdmin}}</el-menu-item>
+    </el-menu>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'hello',
-    props: {
-      message: 'aaa',
-      id: ''
-    },
-    methods: {
-      okClick () {
-        this.$http.get('http://localhost:8080/store/api/' + this.id).then((response) => {
-          this.message = response.data
-        })
-      }
-    }
+    name: 'navigator',
+    methods: {}
   }
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  ul {
-    list-style-type: none;
+  .navigator {
+    height: 100%;
     padding: 0;
+    margin: 0;
   }
 
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #42b983;
-  }
-
-  el-input {
-    maxlength: 10;
+  .menu {
+    height: 100%;
   }
 </style>

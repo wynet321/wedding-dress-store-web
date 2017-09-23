@@ -1,16 +1,15 @@
 <template>
-  <div class="content">
-    <h1>{{ message }}</h1>
-    <el-input v-model="id"/>
-    <br>
-    <el-button v-on:click="okClick" type="primary">OK</el-button>
-    <br> {{ message }}
+  <div class="footer">
+<a href="">About us</a>
+    <a href="">Contact us</a>
+    <br />
+    Copyright © 2017 All Rights Reserved.
   </div>
 </template>
 
 <script>
   export default {
-    name: 'compContent',
+    name: 'compFooter',
     props: {
       message: 'aaa',
       id: ''
@@ -28,11 +27,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .content {
-    width: 100%;
-    height: 100%;
-  }
-
   h1, h2 {
     font-weight: normal;
   }
@@ -49,5 +43,9 @@
 
   a {
     color: #42b983;
+  }
+
+  el-input {
+    maxlength: 10;
   }
 </style>

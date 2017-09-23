@@ -15,7 +15,10 @@ Vue.use(ElementUI)
 Vue.use(common)
 
 Vue.prototype.$i18n = common
-common.fetchI18nText('en_US')
+// common.fetchI18nText('en_US')
+common.fetchI18nText('zh_CN')
+Vue.prototype.$commonText = common.commonText
+Vue.prototype.$tenantText = common.tenantText
 
 /* eslint-disable no-new */
 new Vue({

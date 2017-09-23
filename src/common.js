@@ -1,6 +1,8 @@
 export default {
-  i18nText: '',
+  commonText: '',
+  tenantText: '',
   fetchI18nText: function (locale) {
-    this.i18nText = require('./assets/i18n/' + locale + '.json')
+    this.commonText = require('./assets/i18n/' + locale + '.json')
+    this.tenantText = require('./assets/aimu/i18n/' + locale + '.json')
   }
 }

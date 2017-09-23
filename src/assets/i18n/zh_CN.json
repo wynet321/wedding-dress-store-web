@@ -1,4 +1,18 @@
 {
-  "logo_alt": "爱慕"
+  "Main":{
+    "linkLogout": "退出",
+    "menuProduct": "商品管理",
+    "menuOrder": "订单管理",
+    "menuAdmin": "系统管理"
+  },
+  "Login":{
+    "titleLogin": "婚纱管理",
+    "buttonLogin": "登录",
+    "checkBoxRemember": "记住用户名",
+    "placeHolderUserName": "手机号码或邮箱地址",
+    "placeHolderPassword": "密码",
+    "linkForgetPassword": "忘记密码?"
+  }
+
 }
 
