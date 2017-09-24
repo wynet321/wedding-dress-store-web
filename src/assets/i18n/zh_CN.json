@@ -1,8 +1,18 @@
 {
   "Main":{
     "linkLogout": "退出",
+    "menuCustomer":"客户管理",
+    "menuCustomerList": "客户列表",
+    "menuCustomerMaintenance": "客户维护",
     "menuProduct": "商品管理",
+    "menuProductList": "商品列表",
+    "menuProductMaintenance": "商品维护",
     "menuOrder": "订单管理",
+    "menuOrderList": "订单列表",
+    "menuOrderMaintenance": "订单维护",
+    "menuMemberManagement": "成员管理",
+    "menuWorkFlowManagement": "流程管理",
+    "menuTenantManagement": "租户管理",
     "menuAdmin": "系统管理"
   },
   "Login":{

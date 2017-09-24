@@ -14,15 +14,15 @@
           <template slot="prepend"><img src="../assets/login_password.png"></template>
         </el-input>
       </el-form-item>
-      <el-form-item style="text-align: left; padding: 0 16px;">
-        <el-checkbox id="remember" name="remember" class="checkbox" style="text-align: left">{{ $commonText.Login.checkBoxRemember }}</el-checkbox>
+      <el-form-item style="text-align: left; padding: 0 26px;">
+        <el-checkbox id="remember" name="remember" class="checkbox">{{ $commonText.Login.checkBoxRemember }}</el-checkbox>
       </el-form-item>
       <el-form-item>
         <el-button v-on:click="okClick" type="primary">{{ $commonText.Login.buttonLogin }}</el-button>
         <!--<el-button v-on:click="cancelClick" type="primary">{{ $commonText.buttonCancel }}</el-button>-->
       </el-form-item>
-      <el-form-item>
-        <a href="" style="text-align: right;">{{ $commonText.Login.linkForgetPassword }}</a>
+      <el-form-item style="text-align: right;padding: 0 26px;">
+        <a href="" >{{ $commonText.Login.linkForgetPassword }}</a>
       </el-form-item>
     </el-form>
   </div>
@@ -67,15 +67,13 @@
   div {
     margin: 1%;
   }
-  h1, h2 {
-    font-weight: normal;
-  }
   img {
     height: 30px;
   }
   .el-form {
     width: 100%;
     margin: 0;
+    text-align: center;
   }
   .el-input {
     width: 90%;

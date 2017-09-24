@@ -1,18 +1,19 @@
 <template>
   <div class="main">
     <el-row class="compHeader">
-      <el-col :span="4" style="text-align: left; padding-left: 10px;">
+      <el-col :span="2" style="text-align: left; padding-left: 10px;">
         <a href="http://www.iambrclasse.com.cn">
           <img src="../assets/aimu/logo.gif" :alt="$tenantText.Main.imageLogoAlt" :title="$tenantText.Main.imageLogoAlt"
                style="height: 80px;">
         </a>
       </el-col>
-      <el-col :span="20" style="text-align: right;">
-        <a href="">{{ $commonText.Main.linkLogout}}</a>
+      <el-col :span="21" class="compNavigator">
+        <compNavigator/>
       </el-col>
+      <el-col :span="1" class="exit"><a href="">{{ $commonText.Main.linkLogout }}</a></el-col>
     </el-row>
-    <el-row class="compNavigator">
-      <compNavigator/>
+    <el-row style="height: 15px; padding-top: 1px;">
+      <hr>
     </el-row>
     <el-row class="compContent">
       <compContent/>
@@ -58,9 +59,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .main {
-    width: 100%;
+    width: 1000px;
     height: 100%;
-    text-align: center;
   }
 
   .compHeader {
@@ -68,7 +68,11 @@
   }
 
   .compNavigator {
-    height: 30px;
+    height: 100%;
+  }
+  .exit{
+    height: 100%;
+    padding-top: 60px;
   }
 
   .compContent {
@@ -78,4 +82,5 @@
   .compFooter {
     height: 120px;
   }
+
 </style>
